@@ -25,10 +25,19 @@ function App() {
                 <h1>Loading...</h1>
             )
             : (
-                <Plot
-                data={plot.data}
-                layout={plot.layout}
-                />
+                <div
+                style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    margin: "auto",
+                    paddingTop: "10vh",
+                }}
+                >
+                    <Plot
+                    data={plot.data}
+                    layout={plot.layout}
+                    />
+                </div>
 
             )}
         </>
