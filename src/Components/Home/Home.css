@@ -4,3 +4,11 @@
     margin: auto;
     padding-top: 10vh;
 }
+
+.modebar{
+    display: none !important;
+}
+
+.nsewdrag.drag{
+    cursor: default !important;
+}

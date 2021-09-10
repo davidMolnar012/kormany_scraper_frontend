@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import Plot from 'react-plotly.js';
 
 
-import { getPlot } from '../../Api/api';
+import { getPlot } from '../../lib/Api/api';
 import "./Home.css";
 
 
@@ -11,10 +11,12 @@ function Home() {
 
     const [plot, setPlot] = useState<any>();
     const [loading, setLoading] = useState<boolean>(true);
+    const [layout, setLayout] = useState<any>();
 
     useEffect(() => {
         getPlot().then(response => {
-            setPlot(response)
+            setPlot(response.data)
+            setLayout(response.layout)
             setLoading(false)
         })
     }, [])
@@ -29,8 +31,8 @@ function Home() {
                 : 
                 (
                     <Plot
-                    data={plot.data}
-                    layout={plot.layout}
+                    data={plot}
+                    layout={layout}
                     />
                 )}
             </div>
