@@ -1,7 +1,5 @@
 import axios, { AxiosRequestConfig } from 'axios';
-import { useEffect, useState } from 'react';
-import Plot from 'react-plotly.js';
-import './App.css';
+import Home from './Components/Home/Home';
 
 function App() {
     axios.interceptors.request.use(function(config: AxiosRequestConfig) {
@@ -9,39 +7,10 @@ function App() {
         return config;
     });
 
-    const [plot, setPlot] = useState<any>();
-    const [loading, setLoading] = useState<boolean>(true);
-
-    useEffect(() => {
-        axios.get('/plots')
-        .then((resp) => {
-            setPlot(resp.data)
-            setLoading(false);
-        })
-    }, [])
-
+    // Add routing when it becomes necessary
     return(
         <>
-            {loading ?
-            (
-                <h1>Loading...</h1>
-            )
-            : (
-                <div
-                style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    margin: "auto",
-                    paddingTop: "10vh",
-                }}
-                >
-                    <Plot
-                    data={plot.data}
-                    layout={plot.layout}
-                    />
-                </div>
-
-            )}
+            <Home />
         </>
     );
 }
