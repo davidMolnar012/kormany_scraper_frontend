@@ -32,6 +32,13 @@ function Home() {
 
     return (
         <div>
+            <div className="title-wrapper">
+                <div className="title">
+                    <h2>Mire kellett figyelni ezen a héten?</h2>
+                    <h4>Ha épp nem tudnád mit/kit kell utálni, mi segítünk!</h4>
+                    <h5 style={{textAlign: "center"}}>A hét legfontosabb témái:</h5>
+                </div>
+            </div>
             <div className="home-container">
                 {loading ?
                 (

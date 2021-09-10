@@ -1,5 +1,8 @@
 import axios, { AxiosRequestConfig } from 'axios';
+
+
 import Home from './Components/Home/Home';
+import './App.css';
 
 function App() {
     axios.interceptors.request.use(function(config: AxiosRequestConfig) {

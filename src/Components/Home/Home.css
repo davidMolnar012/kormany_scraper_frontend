@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center;
     margin: auto;
-    padding-top: 10vh;
 }
 
 .modebar{
@@ -17,4 +16,10 @@
     .user-select-none.svg-container {
         zoom: 0.8
     }
+}
+
+.title-wrapper {
+    color: #ff6b12;
+    display: flex;
+    justify-content: center;
 }
