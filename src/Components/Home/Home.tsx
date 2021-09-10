@@ -16,10 +16,19 @@ function Home() {
     useEffect(() => {
         getPlot().then(response => {
             setPlot(response.data)
-            setLayout(response.layout)
+            setLayout(setGraphXY(response.layout))
+            console.log(response.layout)
             setLoading(false)
         })
     }, [])
+
+    function setGraphXY(layout: any) {
+        if (window.innerWidth > 900) {
+            layout.height = 500;
+            layout.width = 900;
+        }
+        return layout;
+    }
 
     return (
         <div>

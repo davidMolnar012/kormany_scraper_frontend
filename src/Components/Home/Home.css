@@ -12,3 +12,9 @@
 .nsewdrag.drag{
     cursor: default !important;
 }
+
+@media screen and (max-width: 500px) {
+    .user-select-none.svg-container {
+        zoom: 0.8
+    }
+}
