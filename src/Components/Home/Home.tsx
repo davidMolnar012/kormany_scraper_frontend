@@ -28,7 +28,7 @@ function Home() {
             layout.width = 900;
         } else {
             layout.height = 350;
-            layout.width = 650;
+            layout.width = 700;
         }
         return layout;
     }
@@ -42,7 +42,7 @@ function Home() {
                     <h4 style={{marginTop: "4rem"}}>A hét legfontosabb témái:</h4>
                 </div>
             </div>
-            <div className="home-container">
+            <div className="react-plot-container">
                 {loading ?
                 (
                     <CircularProgress />
@@ -55,6 +55,8 @@ function Home() {
                     />
                 )}
             </div>
+            <div className="rotate-tooltip">Forgasd el a kijelződ :)</div>
+
         </div>
     )
 }
