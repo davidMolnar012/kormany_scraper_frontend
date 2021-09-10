@@ -1,0 +1,36 @@
+.react-plot-container {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.modebar{
+    display: none !important;
+}
+
+.nsewdrag.drag{
+    cursor: default !important;
+}
+
+@media screen and (max-width: 500px) {
+    .user-select-none.svg-container {
+        zoom: 0.55
+    }
+    .rotate-tooltip {
+        display: flex !important;
+        color: #f0f0f0;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+}
+
+.rotate-tooltip {
+    display: none;
+}
+
+.title-wrapper {
+    color: #ff6b12;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
