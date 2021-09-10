@@ -26,6 +26,9 @@ function Home() {
         if (window.innerWidth > 900) {
             layout.height = 500;
             layout.width = 900;
+        } else {
+            layout.height = 350;
+            layout.width = 650;
         }
         return layout;
     }
@@ -36,7 +39,7 @@ function Home() {
                 <div className="title">
                     <h2>Mire kellett figyelni ezen a héten?</h2>
                     <h4>Ha épp nem tudnád mit/kit kell utálni, mi segítünk!</h4>
-                    <h5 style={{textAlign: "center"}}>A hét legfontosabb témái:</h5>
+                    <h4 style={{marginTop: "4rem"}}>A hét legfontosabb témái:</h4>
                 </div>
             </div>
             <div className="home-container">

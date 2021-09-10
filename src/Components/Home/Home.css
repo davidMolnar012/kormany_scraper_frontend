@@ -14,7 +14,7 @@
 
 @media screen and (max-width: 500px) {
     .user-select-none.svg-container {
-        zoom: 0.8
+        zoom: 0.72
     }
 }
 
@@ -22,4 +22,5 @@
     color: #ff6b12;
     display: flex;
     justify-content: center;
+    text-align: center;
 }
