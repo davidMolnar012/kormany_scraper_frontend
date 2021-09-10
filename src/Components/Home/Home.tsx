@@ -1,8 +1,10 @@
+import { CircularProgress } from '@material-ui/core';
 import { useEffect, useState } from 'react';
 import Plot from 'react-plotly.js';
 
 
 import { getPlot } from '../../Api/api';
+import "./Home.css";
 
 
 function Home() {
@@ -19,26 +21,19 @@ function Home() {
 
     return (
         <div>
-            {loading ?
-            (
-                <h1>Loading...</h1>
-            )
-            : (
-                <div
-                style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    margin: "auto",
-                    paddingTop: "10vh",
-                }}
-                >
+            <div className="home-container">
+                {loading ?
+                (
+                    <CircularProgress />
+                )
+                : 
+                (
                     <Plot
                     data={plot.data}
                     layout={plot.layout}
                     />
-                </div>
-
-            )}
+                )}
+            </div>
         </div>
     )
 }
