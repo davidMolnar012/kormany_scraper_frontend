@@ -10,16 +10,19 @@ import "./Home.css";
 function Home() {
 
     const [plot, setPlot] = useState<any>();
+    const [errorMessage, setErrorMessage] = useState<string>("");
     const [loading, setLoading] = useState<boolean>(true);
     const [layout, setLayout] = useState<any>();
 
     useEffect(() => {
         getPlot().then(response => {
-            setPlot(response.data)
-            setLayout(setGraphXY(response.layout))
-            console.log(response.layout)
-            setLoading(false)
-        })
+            setPlot(response.data);
+            setLayout(setGraphXY(response.layout));
+            console.log(response.layout);
+        }).catch(error => {
+            setErrorMessage("Hálózati hiba :(");
+            console.error(error);
+        }).finally(() => setLoading(false))
     }, [])
 
     function setGraphXY(layout: any) {
@@ -49,10 +52,18 @@ function Home() {
                 )
                 : 
                 (
-                    <Plot
-                    data={plot}
-                    layout={layout}
-                    />
+                    errorMessage === "" ? 
+                    (
+                        <Plot
+                        data={plot}
+                        layout={layout}
+                        />
+                    )
+                    :
+                    (
+                        <p style={{color: "red"}}>{errorMessage}</p>
+                    )
+
                 )}
             </div>
             <div className="rotate-tooltip">Forgasd el a kijelződ :)</div>
