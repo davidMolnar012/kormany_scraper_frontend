@@ -20,18 +20,28 @@ function Home() {
             setLayout(setGraphXY(response.layout));
             console.log(response.layout);
         }).catch(error => {
-            setErrorMessage("Hálózati hiba :(");
+            setErrorMessage("Hálózati hiba");
             console.error(error);
-        }).finally(() => setLoading(false))
-    }, [])
+        }).finally(() => setLoading(false));
+    }, []);
 
+    window.addEventListener("orientationchange", () => {
+        // Plot's layout hook does not refresh for some reason.
+        // Pretty bad but works for now.
+        window.location.reload();
+    })
+
+    // Arbitary values that looked relitvely good.
     function setGraphXY(layout: any) {
         if (window.innerWidth > 900) {
             layout.height = 500;
             layout.width = 900;
-        } else {
-            layout.height = 350;
-            layout.width = 700;
+        } else if (window.innerWidth < 400) {
+            layout.height = 400;
+            layout.width = 650;
+        } else { // between 400 and 900
+            layout.height = 400;
+            layout.width = window.innerWidth;
         }
         return layout;
     }
@@ -66,7 +76,7 @@ function Home() {
 
                 )}
             </div>
-            <div className="rotate-tooltip">Forgasd el a kijelződ :)</div>
+            <div className="rotate-tooltip">A grafikon fekvő tájolásban jobban látható.</div>
 
         </div>
     )
