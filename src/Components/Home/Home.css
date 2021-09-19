@@ -13,9 +13,9 @@
 }
 
 @media screen and (max-width: 500px) {
-    .user-select-none.svg-container {
+    /* .user-select-none.svg-container {
         zoom: 0.55
-    }
+    } */
     .rotate-tooltip {
         display: flex !important;
         color: #f0f0f0;

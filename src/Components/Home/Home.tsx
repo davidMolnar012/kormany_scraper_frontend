@@ -35,10 +35,7 @@ function Home() {
         if (window.innerWidth > 900) {
             layout.height = 500;
             layout.width = 900;
-        } else if (window.innerWidth < 400) {
-            layout.height = 400;
-            layout.width = 650;
-        } else { // between 400 and 900
+        } else {
             layout.height = 400;
             layout.width = window.innerWidth;
         }
