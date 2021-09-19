@@ -4,7 +4,7 @@ function About() {
     return (
         <div className="description-wrapper">
             <div className="description">
-                <h3>
+                <h3 className="description-header">
                     Szakmai leirás:
                 </h3>
                 <p>
@@ -16,9 +16,11 @@ function About() {
                 </p>
                 <p>
                     Később tervezek hozzáadni egyéb funkcionalitásokat az oldalhoz, jelenleg a szabadidőm a limitáló tényező az oldal fejlődésében.
+                </p>
+                <p>
                     Kapcsolat: ormis95@gmail.com
                 </p>
-                <h3>
+                <h3 className="description-header">
                     Story:
                 </h3>
                 <p>

@@ -3,8 +3,14 @@
     color: white;
     margin: auto;
     max-width: 500px;
+    padding: 0px 10px;
 }
 
 .description-wrapper {
     display: flex;
+}
+
+.description-header {
+    color:#f77f00;
+    margin: 2rem 0rem;
 }
