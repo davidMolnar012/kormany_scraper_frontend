@@ -24,12 +24,12 @@ function About() {
                     Story:
                 </h3>
                 <p>
-                    Kiakasztó, hogy a kommunikáció a bitek szintjén zajlik (Brüsszel 😠) és ezért itt az ideje
-                    kifigurázni a lakájmédiát és létrehozni egy oldalt a régi foellenseg.hu mintájára,
-                    ami már sajnos évek óta nem üzemel.
+                    A kommunikáció jelenleg a bitek szintjén zajlik (Brüsszel 😠) ezért ez az oldal
+                    a revolver médiát gúnyolja ki, követve régi foellenseg.hu mintáját,
+                    amely már sajnos évek óta nem üzemel.
                 </p>
                 <p>
-                    A weboldal kezelője, szerkesztője egyik oldallal sem szimpatizál. Az oldal azért jött létre, hogy a politikai kommunikáció
+                    A weboldal létrehozója egyik oldallal sem szimpatizál. Az oldal azért jött létre, hogy a politikai kommunikáció
                     lezüllesztett állapotának tükröt tartson és kifigurázza azt.
                 </p>
             </div>
