@@ -1,0 +1,10 @@
+.description {
+    text-align: justify;
+    color: white;
+    margin: auto;
+    max-width: 500px;
+}
+
+.description-wrapper {
+    display: flex;
+}
