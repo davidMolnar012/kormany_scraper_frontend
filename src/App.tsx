@@ -1,9 +1,11 @@
 import axios, { AxiosRequestConfig } from 'axios';
-import {BrowserRouter as Router, Route} from "react-router-dom";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
 
 import Home from './Components/Home/Home';
 import './App.css';
+import About from './Components/About/About';
+import NoutFound from './Components/NoutFound/NoutFound';
 
 function App() {
     axios.interceptors.request.use(function(config: AxiosRequestConfig) {
@@ -11,11 +13,14 @@ function App() {
         return config;
     });
 
-    // Add routing when it becomes necessary
     return(
         <>
             <Router>
-                <Route exact path="/" component={Home} />
+                <Switch>
+                    <Route exact path="/" component={Home} />
+                    <Route exact path="/about" component={About} />
+                    <Route path="*" component={NoutFound} />
+                </Switch>
             </Router>
         </>
     );
