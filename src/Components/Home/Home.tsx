@@ -18,7 +18,6 @@ function Home() {
         getPlot().then(response => {
             setPlot(response.data);
             setLayout(setGraphXY(response.layout));
-            console.log(response.layout);
         }).catch(error => {
             setErrorMessage("Hálózati hiba");
             console.error(error);
