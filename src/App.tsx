@@ -6,6 +6,7 @@ import Home from './Components/Home/Home';
 import './App.css';
 import About from './Components/About/About';
 import NoutFound from './Components/NoutFound/NoutFound';
+import NavBar from './Components/NavBar/NavBar';
 
 function App() {
     axios.interceptors.request.use(function(config: AxiosRequestConfig) {
@@ -16,6 +17,7 @@ function App() {
     return(
         <>
             <Router>
+                <NavBar />
                 <Switch>
                     <Route exact path="/" component={Home} />
                     <Route exact path="/about" component={About} />
