@@ -1,4 +1,5 @@
 import axios, { AxiosRequestConfig } from 'axios';
+import {BrowserRouter as Router, Route} from "react-router-dom";
 
 
 import Home from './Components/Home/Home';
@@ -13,7 +14,9 @@ function App() {
     // Add routing when it becomes necessary
     return(
         <>
-            <Home />
+            <Router>
+                <Route exact path="/" component={Home} />
+            </Router>
         </>
     );
 }
