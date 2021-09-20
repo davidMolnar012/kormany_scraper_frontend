@@ -16,11 +16,17 @@ Feature branches: These are the branches you should work on.
 At the moment the <https://kormanyscraper.tk> is open to the world, and you can develop from that API.
 This API is available until someone tries to overwhelm/attack it.
 
-## Available Scripts
+## Scripts
 
-In the project directory, you can run:
+Yarn is our preferred package manager.
 
-### `npm start`
+Requirements: yarn, node
+
+### `yarn install`
+
+Install all required pacakges to start the development server
+
+### `yarn start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
